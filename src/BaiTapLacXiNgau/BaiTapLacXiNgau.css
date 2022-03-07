@@ -1,0 +1,31 @@
+/*Phần style này cái đường dẫn phải lấy theo cấu trúc thư mục của src
+
+  // Những cái css riêng thì phải đưa vào thư mục src còn nhưng cái inlinem style trong component thì mới render ra file HTML lúc đó mới liên kết tới thư mục public để lấy ảnh
+
+  // Để mà thấy được cái backGround thì phải cho width: 100% , height: 100%
+  nhưng mà 2 thuộc tính này lại ăn theo thằng body nên nó cũng ko có full ra được, vì vậy phải fixed khung hình lại 100% browser của chúng ta luôn
+*/
+
+/* Định nghĩa font face cho nó*/
+@font-face {
+  /*Ten font do chúng ta tự đặt cho nó*/
+  font-family: 'fontGame';
+  src: url('./font/Pony.ttf');
+}
+
+.game {
+  background-image: url('./assets/bgGame.png');
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  font-family: fontGame;
+}
+
+.btnGame {
+  width: 200px;
+  height: 200px;
+  font-size: 50px;
+  background-color: rgb(82, 108, 239);
+  color: #fff;
+  border: 5px solid rgb(82, 238, 98);
+}
