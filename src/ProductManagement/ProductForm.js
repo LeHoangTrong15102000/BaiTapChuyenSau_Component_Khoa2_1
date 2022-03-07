@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 
 export default class ProductForm extends Component {
   constructor(props) {
@@ -29,12 +30,20 @@ export default class ProductForm extends Component {
     }));
   };
 
+  // Thêm sản phẩm, những bây giờ mình sẽ không thêm thủ công nữa mình sẽ gọi API
   handleSubmit = (evt) => {
     // Ngăn hành vi reload lại page khi submit form
     evt.preventDefault();
     // Đưa values lên component cha để thêm vào mảng products
-    const id = Math.floor(Math.random() * 100);
-    this.props.onSubmit({ ...this.state.values, id });
+    // const id = Math.floor(Math.random() * 100); // Không cần khi làm việc với APIq, vì ID sẽ tự do phía server sinh ra
+    // this.props.onSubmit({ ...this.state.values, id });
+    // Bây giờ gọi API chỉ cần truyền values lên thôi
+    // this.props.onSubmit(this.state)
+
+    // Gọi API thêm sản phẩm
+    axios.post('https://6225cc6d6c0e3966205bc790.mockapi.io/api/Products').then(result => {
+      
+    })
   };
 
   render() {

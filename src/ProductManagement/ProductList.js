@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import ProductItem from "./ProductItem";
 
 export default class ProductList extends Component {
-  handleSelect = (product) => {
+
+  // thì chỉ cần truyền vào "mã" của sản phẩm đó là ta có thể xem được chi tiết sản phẩm đó rồi 
+  handleSelect = (productID) => {
     const { onSelect } = this.props;
-    onSelect(product);
+    onSelect(productID  );
   };
 
   render() {

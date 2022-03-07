@@ -16,12 +16,28 @@ import ContextDemo from './ContextDemo/ContextDemo';
 import UserProfile from './FormValidation/UserProfie/UserProfile';
 import ComponentA from './demoLifecycle/ComponentA';
 import ProductManagement from './ProductManagement/index';
+import demoHooks from './demoHooks/demoHooks'
+import { State } from './demoHooks/State';
+import { Effect } from './demoHooks/Effect';
+import {TodoApp}  from './TodoApp/index';
 
 function App() {
   return (
+
+    // ********************** TodoApp
     <div>
-      <ProductManagement />
+      <TodoApp />
     </div>
+    // ****************************
+    // <div>
+    //   <State />
+    //   {/* <Effect /> */}
+    // </div>
+
+    // <div>
+    //   <ProductManagement />
+    // </div>
+
     // ****************** LifeCycle
     // <div>
     //   {/* <ComponentA /> */}

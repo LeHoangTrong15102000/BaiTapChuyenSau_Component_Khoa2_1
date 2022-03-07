@@ -4,7 +4,7 @@ export default class ProductItem extends Component {
   handleSelect = () => {
     // Làm sao để truyền data lên component cha
     const { product, onSelect } = this.props;
-    onSelect(product);
+    onSelect(product.id);
   };
 
   render() {

@@ -6,6 +6,7 @@ import ProductForm from './ProductForm';
 import axios from 'axios';
 
 export default class ProductManagement extends Component {
+  
   constructor(props) {
     super(props);
 
@@ -28,10 +29,21 @@ export default class ProductManagement extends Component {
       });
   };
 
-  handleSelect = (product) => {
-    this.setState({ selectedProduct: product });
+  // Nếu làm việc với API thì không nhất thiết phải truyền hết sản phẩm lên, chỉ cần truyền API thôi là được
+
+
+  handleSelect = (productID) => {
+    // this.setState({ selectedProduct: product });
+
+    // gọi API
+    axios.get(`https://6225cc6d6c0e3966205bc790.mockapi.io/api/Products/${productID}`).then(result => {
+      this.setState({
+        selectedProduct: result.data,
+      })
+    })
   };
 
+  // Với việc thêm sản phẩm vào thì chúng ta không cần phải thêm ID 
   handleSubmit = (product) => {
     // Không làm: this.state.products.push(product)
 
