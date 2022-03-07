@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default class ProductDetails extends Component {
   render() {
     const { product } = this.props;
 
+    // Nếu không có sản phẩm đó thì return lại là null
     if (!product) {
       return null;
     }

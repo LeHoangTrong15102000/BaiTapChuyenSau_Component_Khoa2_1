@@ -14,12 +14,24 @@ import BaiTapBookingTicket from './CyberMovie/BaiTapBookingTicket';
 import DemoPureComponent from './DemoPureComponent/DemoPureComponent';
 import ContextDemo from './ContextDemo/ContextDemo';
 import UserProfile from './FormValidation/UserProfie/UserProfile';
+import ComponentA from './demoLifecycle/ComponentA';
+import ProductManagement from './ProductManagement/index';
 
 function App() {
   return (
     <div>
-      <UserProfile />
+      <ProductManagement />
     </div>
+    // ****************** LifeCycle
+    // <div>
+    //   {/* <ComponentA /> */}
+    // </div>
+
+    // ******************** Form Validation
+    // <div>
+    //   <UserProfile />
+    // </div>
+
     // ******************** Context API học để biết
     // <div>
     //   <ContextDemo />

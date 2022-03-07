@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default class ProductForm extends Component {
   constructor(props) {
@@ -6,13 +6,13 @@ export default class ProductForm extends Component {
 
     this.state = {
       values: {
-        name: "",
-        os: "",
-        display: "",
-        memory: "",
-        camera: "",
-        price: "",
-        image: "",
+        name: '',
+        os: '',
+        display: '',
+        memory: '',
+        camera: '',
+        price: '',
+        image: '',
       },
     };
   }
@@ -38,12 +38,15 @@ export default class ProductForm extends Component {
   };
 
   render() {
+    // bóc tách values ra
     const { values } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         {/* Name */}
         <div className="form-group">
-          <label htmlFor="name">Name</label>
+          <label style={{ position: 'relative' }} htmlFor="name">
+            Name
+          </label>
           <input
             type="text"
             id="name"
@@ -55,7 +58,9 @@ export default class ProductForm extends Component {
         </div>
         {/* OS */}
         <div className="form-group">
-          <label htmlFor="os">OS</label>
+          <label style={{ position: 'relative' }} htmlFor="os">
+            OS
+          </label>
           <input
             type="text"
             id="os"
@@ -67,7 +72,9 @@ export default class ProductForm extends Component {
         </div>
         {/* Display */}
         <div className="form-group">
-          <label htmlFor="display">Display</label>
+          <label style={{ position: 'relative' }} htmlFor="display">
+            Display
+          </label>
           <input
             type="text"
             id="display"
@@ -79,7 +86,9 @@ export default class ProductForm extends Component {
         </div>
         {/* Camera */}
         <div className="form-group">
-          <label htmlFor="camera">Camera</label>
+          <label style={{ position: 'relative' }} htmlFor="camera">
+            Camera
+          </label>
           <input
             type="text"
             id="camera"
@@ -91,7 +100,9 @@ export default class ProductForm extends Component {
         </div>
         {/* Memory */}
         <div className="form-group">
-          <label htmlFor="memory">Memory</label>
+          <label style={{ position: 'relative' }} htmlFor="memory">
+            Memory
+          </label>
           <input
             type="text"
             id="memory"
@@ -103,7 +114,9 @@ export default class ProductForm extends Component {
         </div>
         {/* Price */}
         <div className="form-group">
-          <label htmlFor="price">Price</label>
+          <label style={{ position: 'relative' }} htmlFor="price">
+            Price
+          </label>
           <input
             type="text"
             id="price"
@@ -115,7 +128,9 @@ export default class ProductForm extends Component {
         </div>
         {/* Image */}
         <div className="form-group">
-          <label htmlFor="image">Image</label>
+          <label style={{ position: 'relative' }} htmlFor="image">
+            Image
+          </label>
           <input
             type="text"
             id="image"
