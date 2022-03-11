@@ -20,14 +20,26 @@ import demoHooks from './demoHooks/demoHooks'
 import { State } from './demoHooks/State';
 import { Effect } from './demoHooks/Effect';
 import {TodoApp}  from './TodoApp/index';
+import UseRef from './demoHooks/UseRef';
+import CustomHook from './demoHooks/CustomHook'
 
 function App() {
   return (
 
-    // ********************** TodoApp
+    // ********************* Custom hook
     <div>
-      <TodoApp />
+      <CustomHook />
     </div>
+
+    // ********************* Demo UseRef
+    // <div>
+    //   <UseRef />
+    // </div>
+
+    // ********************** TodoApp
+    // <div>
+    //   <TodoApp />
+    // </div>
     // ****************************
     // <div>
     //   <State />
